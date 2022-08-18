@@ -244,3 +244,79 @@ int main() {
 
     return 0;
 }
+
+int factorial(int n){
+  int fact = 1;
+  for (int i=1;i<=n;i++){
+    fact = fact * i;
+  }
+  return fact ;
+}
+
+int nCr(int n, int r){
+  int numerator = factorial(n);
+  int denominator = factorial (r) * factorial (n-r);
+  return numerator/denominator;
+}
+
+int power(){
+  int a, b;
+  cin >> a >> b ;
+  int ans = 1;
+  for (int i =1; i<=b ;i++){
+    ans = ans*a;
+  }
+  return ans;
+}
+
+bool isEven(int x){
+  if (x&1){
+    return 0;
+  }
+  else{
+    return 1;      
+  }
+ 
+}
+
+bool isPrime(int m){
+  for (int i =2; i<m ; i++){
+    if (m%i==0){
+      return 0 ;
+    }
+  }
+  return 1 ;
+}
+
+void printCounting(int q){
+  for (int i = 1 ; i <= q ; i++){
+    cout << i;
+  }
+  cout << endl;
+}
+
+int main(){
+
+//cout << "Power of A and B is " << power() << endl;
+//cout << "nCr is " << nCr(n,r) << endl ;
+// int num ;
+//cin >> num ;
+// if (isEven(num)){
+//   cout << "Number is Even"  << endl;
+// }
+// else {
+//   cout << "Number is Odd" << endl ;
+//  int mu ;
+//  cin >> mu;
+//  if (isPrime(mu)){
+//    cout << "Prime Number" << endl ;
+//  }
+//  else {
+//    cout << "Not a Prime Number " << endl;
+//  }
+  int j;
+  cin >> j;
+  printCounting(j);
+
+ 
+}
